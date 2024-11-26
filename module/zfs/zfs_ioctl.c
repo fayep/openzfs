@@ -5839,7 +5839,7 @@ zfs_ioc_userspace_many(zfs_cmd_t *zc)
 
 	if (error == 0) {
 		error = xcopyout(buf,
-		    (void *)(uintptr_t)zc->zc_nvlist_dst,
+		    (uintptr_t)zc->zc_nvlist_dst,
 		    zc->zc_nvlist_dst_size);
 	}
 	vmem_free(buf, bufsize);

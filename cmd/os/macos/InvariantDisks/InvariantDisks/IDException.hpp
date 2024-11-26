@@ -16,6 +16,7 @@
 #include <stdexcept>
 #include <sstream>
 
+#include <CoreFoundation/CFString.h>
 #include <CoreFoundation/CFError.h>
 
 namespace ID

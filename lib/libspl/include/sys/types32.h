@@ -65,6 +65,7 @@ typedef	int32_t		ssize32_t;
 typedef	int32_t		time32_t;
 typedef	int32_t		clock32_t;
 
+#if !defined(__APPLE__)
 struct timeval32 {
 	time32_t	tv_sec;		/* seconds */
 	int32_t		tv_usec;	/* and microseconds */
@@ -81,9 +82,9 @@ typedef	struct itimerspec32 {
 	struct timespec32 it_interval;
 	struct timespec32 it_value;
 } itimerspec32_t;
+#endif
 
 #ifdef	__cplusplus
 }
 #endif
-
 #endif	/* _SYS_TYPES32_H */
